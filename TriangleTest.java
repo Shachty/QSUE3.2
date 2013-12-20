@@ -42,7 +42,7 @@ public class TriangleTest {
 	}
 	@Test(expected = IllegalArgumentException.class)
 	public void calculatesAngleWithNegativeValues_shouldThrowException(){
-		double givenAngle = 30;
+		double givenAngle = -30;
 		triangle.calculateAngle(givenAngle);
 	}
 	@Test(expected = IllegalArgumentException.class)
