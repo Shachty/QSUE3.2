@@ -35,5 +35,20 @@ public class TriangleTest {
 		
 		triangle.calculateHypotenuse(a, b);
 	}
+	@Test
+	public void calculatesAngle_shouldReturnMissingAngle(){
+		double givenAngle = 30;
+		if(triangle.calculateAngle(givenAngle) != 60){fail();}
+	}
+	@Test(expected = IllegalArgumentException.class)
+	public void calculatesAngleWithNegativeValues_shouldThrowException(){
+		double givenAngle = 30;
+		triangle.calculateAngle(givenAngle);
+	}
+	@Test(expected = IllegalArgumentException.class)
+	public void calculatesAngleWithAZeroAngle_shouldThrowException(){
+		double givenAngle = 0;
+		triangle.calculateAngle(givenAngle);
+	}
 
 }
