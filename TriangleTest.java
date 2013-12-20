@@ -50,5 +50,28 @@ public class TriangleTest {
 		double givenAngle = 0;
 		triangle.calculateAngle(givenAngle);
 	}
+	
+	@Test
+	public void calculatesSurface_shouldReturnSurface(){
+		double a = 3;
+		double b = 4;
+		
+		if(triangle.calculateSurface(a, b) != 6){ fail();}
+	}
+	@Test(expected = IllegalArgumentException.class)
+	public void calculatesSurfaceWithNegativeValues_shouldThrowException(){
+		double a = -3;
+		double b = -4;
+		
+		triangle.calculateSurface(a, b);
+		
+	}
+	@Test(expected = IllegalArgumentException.class)
+	public void calculatesSurfaceWithAZeroValue_shouldThrowException(){
+		double a = 0;
+		double b = -4;
+		
+		triangle.calculateSurface(a, b);
+	}
 
 }

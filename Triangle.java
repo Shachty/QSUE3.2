@@ -13,8 +13,8 @@ public class Triangle {
 		
 	}
 	
-	public double calculateSurface(double a, double b, double c){
-		return c;
+	public double calculateSurface(double a, double b){
+		return b;
 		
 	}
 	
